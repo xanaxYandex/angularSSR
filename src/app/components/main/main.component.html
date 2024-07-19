@@ -1,0 +1,5 @@
+<mat-selection-list #shoes [multiple]="false">
+  @for (post of posts$ | async; track post) {
+    <mat-list-option [value]="post.id">{{post.title}}</mat-list-option>
+  }
+</mat-selection-list>
